@@ -109,8 +109,8 @@ CRM 产品层通过自有接口调用运行内核；Pi 类型封装在适配层�
 准备 Node.js 22+、pnpm，以及开发用 Supabase 和 Redis 配置。
 
 ```bash
-git clone https://github.com/helsome/AiNativeCrm.git
-cd AiNativeCrm
+git clone https://github.com/Akaliup/AI-CRM.git
+cd AI-CRM
 pnpm install --frozen-lockfile
 
 # 仅在配置文件不存在时创建，保留已有配置
@@ -118,7 +118,7 @@ test -e .env.local || cp .env.example .env.local
 test -e .env || touch .env
 ```
 
-按照 [开发配置指南](docs/SETUP.md)填写 Supabase、Redis、应用地址及服务端加密配置；新开发数据库按指南初始化。已有数据库按迁移流程更新。
+按照 [开发配置指南](docs/SETUP.md) 填写 Supabase、Redis、应用地址及服务端加密配置；新开发数据库按指南初始化。已有数据库按迁移流程更新。
 
 在不同终端中启动：
 
@@ -135,7 +135,7 @@ pnpm dev:crons
 
 打开 [本地工作台](http://localhost:3000/app/ai/workbench)，登录后在组织模型配置页绑定真实模型凭据，选择内置 Agent、CRM 对象和任务开始运行。
 
-Mem0、WeKnora 与 Langfuse 的本地服务部署和组织绑定，见 [本地服务指南](infra/local-agent-services/README.md)与[接入契约](docs/integrations/agent-services.md)。
+Mem0、WeKnora 与 Langfuse 的本地服务部署和组织绑定，见 [本地服务指南](infra/local-agent-services/README.md) 与 [接入契约](docs/integrations/agent-services.md)。
 
 ### 演示与真实运行回放
 
@@ -200,6 +200,4 @@ node scripts/serve-agent-demo.mjs
 - [本地服务启动与联调](infra/local-agent-services/README.md)
 - [专项 E2E 测试入口](tests/e2e/configs/README.md)
 
-内部开发先阅读 [AGENTS.md](AGENTS.md)与[CLAUDE.md](CLAUDE.md)。本项目包含继承代码，遵循 [MIT 许可及原版权声明](LICENSE)。
-#   A I - c r m  
- 
+内部开发先阅读 [AGENTS.md](AGENTS.md) 与 [CLAUDE.md](CLAUDE.md)。本项目包含继承代码，遵循 [MIT 许可及原版权声明](LICENSE)。
